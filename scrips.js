@@ -321,44 +321,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // FORM SUBMIT
+    // FORM SUBMIT - WEB3FORMS
     // =====================================================
-
-    form.addEventListener("submit", (event) => {
-
+    
+    form.addEventListener("submit", async (event) => {
+    
         event.preventDefault();
-
-
-        // مرحله آخر اختیاری است
-
-        const formData =
-            new FormData(form);
-
-
-        console.log("اطلاعات فرم:");
-
-        for (const [key, value] of formData.entries()) {
-
-            console.log(key, value);
+    
+        // جلوگیری از چند بار کلیک کردن روی ثبت
+        submitButton.disabled = true;
+        submitButton.textContent = "در حال ارسال...";
+    
+        const formData = new FormData(form);
+    
+        try {
+        
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+        
+            const result = await response.json();
+        
+            if (result.success) {
+            
+                // نمایش پیام موفقیت
+                form.innerHTML = `
+                    <div class="success-message">
+                        درخواست شما با موفقیت ثبت شد 🌹
+                        <br>
+                        <small>
+                            ممنون که برای همکاری با انجمن علمی اقدام کردید.
+                        </small>
+                    </div>
+                `;
+            
+            } else {
+            
+                console.error("Web3Forms error:", result);
+            
+                submitButton.disabled = false;
+                submitButton.textContent = "ثبت درخواست";
+            
+                alert(
+                    "ارسال اطلاعات انجام نشد. لطفاً دوباره تلاش کنید."
+                );
+            }
+        
+        } catch (error) {
+        
+            console.error("Network error:", error);
+        
+            submitButton.disabled = false;
+            submitButton.textContent = "ثبت درخواست";
+        
+            alert(
+                "خطایی در اتصال به سرور رخ داد. لطفاً دوباره تلاش کنید."
+            );
         }
-
-
-        // =================================================
-        // نمایش پیام موفقیت
-        // =================================================
-
-        form.innerHTML = `
-            <div class="success-message">
-                درخواست شما با موفقیت ثبت شد 🌹
-                <br>
-                <small>
-                    ممنون که برای همکاری با انجمن علمی اقدام کردید.
-                </small>
-            </div>
-        `;
-
+    
     });
-
 
     // =====================================================
     // PERSIAN NUMBERS
