@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>فرم ثبت نام انجمن علمی</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="container">
+
+            <div class="form-frame">
+
+                <!-- لوگوی اولیه -->
+                <img
+                    src="images/photo_2020-04-25_12-26-43.jpg"
+                    alt="لوگوی انجمن"
+                    class="anjoman-logo"
+                >
+
+                <!-- لوگو بعد از انیمیشن -->
+                <img
+                    src="images/photo_2020-04-25_12-26-43.jpg"
+                    alt="لوگوی انجمن"
+                    class="anjoman-logo2"
+                >
+
+                <!-- Wrapper اصلی -->
+                <div class="wrapper">
+
+                    <p class="welcome">خوش آمدید</p>
+
+                    <p class="anjoman-elmi">انجمن علمی</p>
+
+                    <!-- فرم -->
+                    <div class="form">
+
+                        <!-- آیکون کاربر -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="user-icon">
+                          <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                        </svg>
+
+
+                        <p class="sign-up">فرم ثبت نام</p>
+
+                        <div class="under-line"></div>
+
+                        <form action="" class="inputs" id="registrationForm">
+
+                            <!-- مرحله 1 -->
+                            <div class="step active" data-step="0">
+
+                                <div class="field">
+                                    <label for="name" class="form-text">
+                                        نام
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        class="form-input"
+                                        autocomplete="given-name"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 2 -->
+                            <div class="step" data-step="1">
+
+                                <div class="field">
+                                    <label for="last-name" class="form-text">
+                                        نام خانوادگی
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="last-name"
+                                        id="last-name"
+                                        class="form-input"
+                                        autocomplete="family-name"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 3 -->
+                            <div class="step" data-step="2">
+
+                                <div class="field">
+                                    <label for="number" class="form-text">
+                                        شماره موبایل
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        name="number"
+                                        id="number"
+                                        class="form-input"
+                                        inputmode="tel"
+                                        autocomplete="tel"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 4 -->
+                            <div class="step" data-step="3">
+
+                                <div class="field">
+                                    <label for="study-field" class="form-text">
+                                        رشته تحصیلی
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="study-field"
+                                        id="study-field"
+                                        class="form-input"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 5 -->
+                            <div class="step" data-step="4">
+
+                                <div class="field">
+                                    <label for="study-year" class="form-text">
+                                        سال ورودی
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="study-year"
+                                        id="study-year"
+                                        class="form-input"
+                                        inputmode="numeric"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 6 -->
+                            <div class="step" data-step="5">
+
+                                <div class="skill-box">
+
+                                    <label
+                                        for="skill"
+                                        class="form-text skill-label"
+                                    >
+                                        میزان تسلط به نرم افزارهای
+                                        <br>
+                                        ادیت عکس و ویدیو
+                                    </label>
+
+                                    <div class="skill-description">
+                                        <span>زیاد</span>
+                                        <span>هیچ</span>
+                                    </div>
+
+                                    <div class="rating">
+
+                                        <button
+                                            type="button"
+                                            data-value="0"
+                                            aria-label="تسلط صفر"
+                                        >
+                                            0
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="1"
+                                            aria-label="تسلط یک"
+                                        >
+                                            1
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="2"
+                                            aria-label="تسلط دو"
+                                        >
+                                            2
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="3"
+                                            aria-label="تسلط سه"
+                                        >
+                                            3
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="4"
+                                            aria-label="تسلط چهار"
+                                        >
+                                            4
+                                        </button>
+
+                                    </div>
+
+                                    <input
+                                        type="hidden"
+                                        name="skill"
+                                        id="skill"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 7 -->
+                            <div class="step" data-step="6">
+
+                                <div class="field large-field">
+
+                                    <label
+                                        for="experience"
+                                        class="form-text"
+                                    >
+                                        سوابق کاری
+                                        <br><br>
+                                        آیا قبلا در انجمن های علمی
+                                        یا کانون های فرهنگی تجربه
+                                        فعالیت داشتید؟
+                                        <br>
+                                        اگر داشتید لطفا اسم آن را بنویسید
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="experience"
+                                        id="experience"
+                                        class="form-input wide-input"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 8 -->
+                            <div class="step" data-step="7">
+
+                                <div class="field">
+
+                                    <label
+                                        for="favorite-field"
+                                        class="form-text"
+                                    >
+                                        در چه زمینه هایی علاقه مند
+                                        به همکاری با انجمن علمی هستین؟
+                                    </label>
+
+                                    <textarea
+                                        name="favorite-field"
+                                        id="favorite-field"
+                                        class="textarea"
+                                        rows="7"
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- مرحله 9 - اختیاری -->
+                            <div class="step" data-step="8">
+
+                                <div class="field">
+
+                                    <label
+                                        for="extra-info"
+                                        class="form-text"
+                                    >
+                                        اگر توضیحات دیگری دارید
+                                        میتوانید اینجا بنویسید
+                                    </label>
+
+                                    <textarea
+                                        name="extra-info"
+                                        id="extra-info"
+                                        class="textarea"
+                                        rows="7"
+                                    ></textarea>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- دکمه های مرحله -->
+                            <div class="navigation">
+
+                                <button
+                                    type="button"
+                                    class="nav-button previous-button"
+                                    id="previousButton"
+                                >
+                                    قبلی
+                                </button>
+
+                                <span
+                                    class="step-counter"
+                                    id="stepCounter"
+                                >
+                                    ۱ / ۹
+                                </span>
+
+                                <button
+                                    type="button"
+                                    class="nav-button next-button"
+                                    id="nextButton"
+                                >
+                                    بعدی
+                                </button>
+
+                            </div>
+
+
+                            <!-- دکمه ثبت -->
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="submitButton"
+                            >
+                                ثبت درخواست
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./scrips.js"></script>
+
+</body>
+
+</html>
