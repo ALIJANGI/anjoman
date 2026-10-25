@@ -328,11 +328,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
         event.preventDefault();
     
-        // جلوگیری از چند بار کلیک کردن روی ثبت
         submitButton.disabled = true;
         submitButton.textContent = "در حال ارسال...";
     
         const formData = new FormData(form);
+    
+        const data = Object.fromEntries(formData.entries());
     
         try {
         
@@ -340,15 +341,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 "https://api.web3forms.com/submit",
                 {
                     method: "POST",
-                    body: formData
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(data)
                 }
             );
         
             const result = await response.json();
         
-            if (result.success) {
+            console.log("Web3Forms response:", result);
+        
+            if (response.ok && result.success) {
             
-                // نمایش پیام موفقیت
                 form.innerHTML = `
                     <div class="success-message">
                         درخواست شما با موفقیت ثبت شد 🌹
@@ -367,6 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 submitButton.textContent = "ثبت درخواست";
             
                 alert(
+                    result.message ||
                     "ارسال اطلاعات انجام نشد. لطفاً دوباره تلاش کنید."
                 );
             }
