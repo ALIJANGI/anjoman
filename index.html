@@ -43,24 +43,47 @@
                     <div class="form">
 
                         <!-- آیکون کاربر -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="user-icon">
-                          <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="user-icon"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                                clip-rule="evenodd"
+                            />
                         </svg>
-
 
                         <p class="sign-up">فرم ثبت نام</p>
 
                         <div class="under-line"></div>
 
-                        <form action="" class="inputs" id="registrationForm">
+                        <form
+                            action=""
+                            class="inputs"
+                            id="registrationForm"
+                        >
 
-                            <input type="hidden" name="access_key" value="69e8f104-f75b-407e-b8c5-6095bcb77fda">
+                            <!-- Web3Forms -->
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="69e8f104-f75b-407e-b8c5-6095bcb77fda"
+                            >
 
+                            <!-- ========================================= -->
                             <!-- مرحله 1 -->
+                            <!-- ========================================= -->
                             <div class="step active" data-step="0">
 
                                 <div class="field">
-                                    <label for="name" class="form-text">
+
+                                    <label
+                                        for="name"
+                                        class="form-text"
+                                    >
                                         نام
                                     </label>
 
@@ -72,16 +95,23 @@
                                         autocomplete="given-name"
                                         required
                                     >
+
                                 </div>
 
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- مرحله 2 -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="1">
 
                                 <div class="field">
-                                    <label for="last-name" class="form-text">
+
+                                    <label
+                                        for="last-name"
+                                        class="form-text"
+                                    >
                                         نام خانوادگی
                                     </label>
 
@@ -93,16 +123,23 @@
                                         autocomplete="family-name"
                                         required
                                     >
+
                                 </div>
 
                             </div>
 
 
-                            <!-- مرحله 3 -->
+                            <!-- ========================================= -->
+                            <!-- مرحله 3 - شماره موبایل -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="2">
 
                                 <div class="field">
-                                    <label for="number" class="form-text">
+
+                                    <label
+                                        for="number"
+                                        class="form-text"
+                                    >
                                         شماره موبایل
                                     </label>
 
@@ -113,18 +150,27 @@
                                         class="form-input"
                                         inputmode="tel"
                                         autocomplete="tel"
+                                        maxlength="11"
+                                        placeholder="09123456789"
                                         required
                                     >
+
                                 </div>
 
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- مرحله 4 -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="3">
 
                                 <div class="field">
-                                    <label for="study-field" class="form-text">
+
+                                    <label
+                                        for="study-field"
+                                        class="form-text"
+                                    >
                                         رشته تحصیلی
                                     </label>
 
@@ -135,16 +181,23 @@
                                         class="form-input"
                                         required
                                     >
+
                                 </div>
 
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- مرحله 5 -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="4">
 
                                 <div class="field">
-                                    <label for="study-year" class="form-text">
+
+                                    <label
+                                        for="study-year"
+                                        class="form-text"
+                                    >
                                         سال ورودی
                                     </label>
 
@@ -156,18 +209,21 @@
                                         inputmode="numeric"
                                         required
                                     >
+
                                 </div>
 
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- مرحله 6 -->
+                            <!-- میزان تسلط به ادیت -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="5">
 
                                 <div class="skill-box">
 
                                     <label
-                                        for="skill"
                                         class="form-text skill-label"
                                     >
                                         میزان تسلط به نرم افزارهای
@@ -235,8 +291,127 @@
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- مرحله 7 -->
+                            <!-- تجربه برنامه نویسی / سخت افزار / نرم افزار -->
+                            <!-- ========================================= -->
                             <div class="step" data-step="6">
+
+                                <div class="skill-box">
+
+                                    <label
+                                        class="form-text skill-label"
+                                    >
+                                        آیا قبلاً در زمینه برنامه‌نویسی،
+                                        <br>
+                                        کار با سخت‌افزار یا نرم‌افزار
+                                        تجربه داشته‌اید؟
+                                    </label>
+
+                                    <div class="rating experience-yes-no">
+
+                                        <button
+                                            type="button"
+                                            data-value="بله"
+                                            aria-label="بله"
+                                        >
+                                            بله
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="خیر"
+                                            aria-label="خیر"
+                                        >
+                                            خیر
+                                        </button>
+
+                                    </div>
+
+                                    <input
+                                        type="hidden"
+                                        name="technical_experience"
+                                        id="technical-experience"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ========================================= -->
+                            <!-- مرحله 8 -->
+                            <!-- میزان تجربه -->
+                            <!-- ========================================= -->
+                            <div class="step" data-step="7">
+
+                                <div class="skill-box">
+
+                                    <label
+                                        class="form-text skill-label"
+                                    >
+                                        میزان تجربه شما در زمینه
+                                        <br>
+                                        برنامه‌نویسی، سخت‌افزار یا نرم‌افزار
+                                        چقدر است؟
+                                    </label>
+
+                                    <div class="skill-description">
+                                        <span>تجربه زیاد</span>
+                                        <span>تجربه کم</span>
+                                    </div>
+
+                                    <div class="rating technical-rating">
+
+                                        <button
+                                            type="button"
+                                            data-value="1"
+                                            aria-label="تجربه یک"
+                                        >
+                                            1
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="2"
+                                            aria-label="تجربه دو"
+                                        >
+                                            2
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="3"
+                                            aria-label="تجربه سه"
+                                        >
+                                            3
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            data-value="4"
+                                            aria-label="تجربه چهار"
+                                        >
+                                            4
+                                        </button>
+
+                                    </div>
+
+                                    <input
+                                        type="hidden"
+                                        name="technical_skill"
+                                        id="technical-skill"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ========================================= -->
+                            <!-- مرحله 9 -->
+                            <!-- ========================================= -->
+                            <div class="step" data-step="8">
 
                                 <div class="field large-field">
 
@@ -246,11 +421,11 @@
                                     >
                                         سوابق کاری
                                         <br><br>
-                                        آیا قبلا در انجمن های علمی
-                                        یا کانون های فرهنگی تجربه
+                                        آیا قبلاً در انجمن‌های علمی
+                                        یا کانون‌های فرهنگی تجربه
                                         فعالیت داشتید؟
                                         <br>
-                                        اگر داشتید لطفا اسم آن را بنویسید
+                                        اگر داشتید لطفاً اسم آن را بنویسید.
                                     </label>
 
                                     <input
@@ -266,8 +441,10 @@
                             </div>
 
 
-                            <!-- مرحله 8 -->
-                            <div class="step" data-step="7">
+                            <!-- ========================================= -->
+                            <!-- مرحله 10 -->
+                            <!-- ========================================= -->
+                            <div class="step" data-step="9">
 
                                 <div class="field">
 
@@ -275,8 +452,8 @@
                                         for="favorite-field"
                                         class="form-text"
                                     >
-                                        در چه زمینه هایی علاقه مند
-                                        به همکاری با انجمن علمی هستین؟
+                                        در چه زمینه‌هایی علاقه‌مند
+                                        به همکاری با انجمن علمی هستید؟
                                     </label>
 
                                     <textarea
@@ -292,8 +469,10 @@
                             </div>
 
 
-                            <!-- مرحله 9 - اختیاری -->
-                            <div class="step" data-step="8">
+                            <!-- ========================================= -->
+                            <!-- مرحله 11 - اختیاری -->
+                            <!-- ========================================= -->
+                            <div class="step" data-step="10">
 
                                 <div class="field">
 
@@ -301,8 +480,8 @@
                                         for="extra-info"
                                         class="form-text"
                                     >
-                                        اگر توضیحات دیگری دارید
-                                        میتوانید اینجا بنویسید
+                                        اگر توضیحات دیگری دارید،
+                                        می‌توانید اینجا بنویسید.
                                     </label>
 
                                     <textarea
@@ -317,7 +496,9 @@
                             </div>
 
 
-                            <!-- دکمه های مرحله -->
+                            <!-- ========================================= -->
+                            <!-- دکمه‌های مرحله -->
+                            <!-- ========================================= -->
                             <div class="navigation">
 
                                 <button
@@ -332,7 +513,7 @@
                                     class="step-counter"
                                     id="stepCounter"
                                 >
-                                    ۱ / ۹
+                                    ۱۱ / ۱
                                 </span>
 
                                 <button
@@ -346,7 +527,9 @@
                             </div>
 
 
+                            <!-- ========================================= -->
                             <!-- دکمه ثبت -->
+                            <!-- ========================================= -->
                             <button
                                 type="submit"
                                 class="submit-button"
