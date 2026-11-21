@@ -256,6 +256,10 @@ img {
     min-height: 49rem;
 
     margin-bottom: 2rem;
+
+
+    /* Keep layout recalculations caused by the opening animation inside this frame. */
+    contain: layout;
 }
 
 
@@ -266,6 +270,9 @@ img {
 .anjoman-logo,
 .anjoman-logo2 {
     position: absolute;
+
+    /* Keep the existing logo motion on a prepared compositing layer. */
+    will-change: transform, opacity;
 
     z-index: 5;
 
@@ -308,6 +315,9 @@ img {
 
 .wrapper {
     position: relative;
+
+    /* Hint the browser to prepare this element for its existing size animation. */
+    will-change: width, height, margin-top, opacity;
 
     z-index: 0;
 
